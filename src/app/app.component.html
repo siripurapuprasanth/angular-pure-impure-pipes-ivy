@@ -1,0 +1,15 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<p>Pure Pipe: start typing to see pipe transform</p>
+<input type="number" [(ngModel)]="inputValue">
+<span>transform value: {{inputValue | currency}}</span>
+
+<p>Pure Pipe: click transform to see pipe transform</p>
+<input type="date" [(ngModel)]="inputDate">
+<button (click)="onButtonClick($event)">transform</button>
+<span>transform value: {{transformedDate}}</span>
+<p>Display of full name value using custom pipe</p>
+<span>Full Name: {{employee | customPipe:['firstName', 'lastName']}}</span>
